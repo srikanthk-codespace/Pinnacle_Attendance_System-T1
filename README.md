@@ -87,6 +87,8 @@ This system solves the above problems by:
 
 ![records](screenshoot (41).png)
 
+Note: to view above images it's present with the Code 
+
 ---
 Attendance System (Live Project)
 🌐 Live Demo: https://srikanthk-codespace.github.io/Pinnacle_Attendance_System-T1/
