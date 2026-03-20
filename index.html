@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attendance System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Excel Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      width: 40%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background: #667eea;
+      color: white;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f1f1f1;
+      margin: 5px;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 🔐 LOGIN -->
+<div class="container" id="loginBox">
+  <h2>🔐 Admin Login</h2>
+  <input id="email" placeholder="Email"><br>
+  <input id="password" type="password" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- 📊 APP -->
+<div class="container" id="appBox" style="display:none;">
+  <h2>📊 Attendance System</h2>
+
+  <!-- ✅ FINAL INPUTS -->
+  <input id="name" placeholder="Enter Name">
+  <input id="roll" placeholder="Enter Roll No">
+
+  <button onclick="markAttendance()">Mark</button>
+
+  <br>
+
+  <input type="date" id="filterDate">
+  <button onclick="filterData()">Filter</button>
+  <button onclick="loadData()">Show All</button>
+  <button onclick="downloadExcel()">Excel</button>
+  <button onclick="logout()">Logout</button>
+
+  <h3>Records</h3>
+  <ul id="list"></ul>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
